@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class Main {
 	public static void main(String[] args) {
-		SpringApplication.run(Main.class, args);
+        SpringApplication.run(Main.class, args);
     }
-    
+
     @GetMapping(value = "/")
     public String index() {
-        return "Index";
+        return "Bag Service is Running";
     }
 }

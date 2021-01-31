@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: "development"
+  main:
+    banner-mode: "off"
+  output:
+    ansi:
+      enabled: "always"
+  datasource:
+    dialect: "org.hibernate.dialect.PostgreSQLDialect"
+    url: "jdbc:postgresql://localhost:5432/kioku"
+    username: "phobos"
+    password: "0000"
+  jpa:
+    hibernate:
+      ddl-auto: "create"
+
+logging:
+  level:
+    root: "off"
+    app: "info"
+  pattern:
+    console: "\u001B[1m[%clr(%level)\u001B[1m][%cyan(%logger)\u001B[1m] \u001b[0m %msg %n"
